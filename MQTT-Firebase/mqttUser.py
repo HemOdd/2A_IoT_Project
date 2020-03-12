@@ -11,7 +11,7 @@ def my_callback(userInput):
         return -1
     else:
         client.publish("User 1", userInput)
-
+        log_File(userInput)
 #start the Keyboard thread
 kthread = KeyboardThread(my_callback)
 
@@ -26,9 +26,16 @@ def on_connect(client,userdata,flags,rc):
         print ("Status: User 1 Connected")
         client.subscribe("Sensor 1", 0)
         client.subscribe("Sensor 2", 0)
+        FirebaseInit.initialize()
     else:
         print ("Status: User 1 - Bad Conncetion With Error Code: ",rc)
 
+def log_File(value):
+    db = FirebaseInit.firestore.client()
+    doc_ref = db.collection('Sensor 1').document('Temperature')
+    doc_ref.set({
+        'temperature': value
+    })
 
 client = mqtt.Client("user1-8936")
 client.connect("mqtt.eclipse.org",1883, 60)
