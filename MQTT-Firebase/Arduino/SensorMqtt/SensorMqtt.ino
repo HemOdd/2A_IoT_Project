@@ -104,7 +104,7 @@ void loop() {
   
   message.toCharArray(pubMsg, message.length()+1);
   client.publish("Sensor 1", pubMsg);
-  Serial.print("message publish to sensor 2 with payload ");
+  Serial.print("message publish to sensor 1 with payload ");
   Serial.println(message);
   delay(1000);
   client.loop();
