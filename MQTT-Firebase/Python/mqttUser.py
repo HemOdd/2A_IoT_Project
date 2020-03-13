@@ -11,7 +11,7 @@ def my_callback(userInput):
         return -1
     else:
         client.publish("User 1", userInput)
-        log_File(userInput)
+        #log_File(userInput)
 #start the Keyboard thread
 kthread = KeyboardThread(my_callback)
 
@@ -21,6 +21,8 @@ def on_message(client,userdata,msg):
     print("From: ", topic)
     print ("Message Received : ",m_decode)
     print()
+    if m_decode == "100":
+        log_File(m_decode,topic)
 def on_connect(client,userdata,flags,rc):
     if rc == 0:
         print ("Status: User 1 Connected")
@@ -30,9 +32,10 @@ def on_connect(client,userdata,flags,rc):
     else:
         print ("Status: User 1 - Bad Conncetion With Error Code: ",rc)
 
-def log_File(value):
+def log_File(value,topic):
+    print("logging file....")
     db = FirebaseInit.firestore.client()
-    doc_ref = db.collection('Sensor 1').document('Temperature')
+    doc_ref = db.collection('Sensors').document(topic)
     doc_ref.set({
         'temperature': value
     })
