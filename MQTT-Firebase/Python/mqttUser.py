@@ -21,8 +21,10 @@ def on_message(client,userdata,msg):
     print("From: ", topic)
     print ("Message Received : ",m_decode)
     print()
+    #sensors to Firebase
     if m_decode == "100":
         log_File(m_decode,topic)
+
 def on_connect(client,userdata,flags,rc):
     if rc == 0:
         print ("Status: User 1 Connected")
