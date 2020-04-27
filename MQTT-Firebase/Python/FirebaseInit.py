@@ -3,6 +3,10 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 def initialize():
+    """
+    This function contain credentials of the database this file is confidential
+    :return: none
+    """
     cred = credentials.Certificate('./ServiceAccountKey.json')
     firebase_admin.initialize_app(cred,{
         "apiKey": "AIzaSyCzfAt1eLmwZw3-DFP-i78g2AO-HwDyNug",
@@ -11,18 +15,3 @@ def initialize():
         "storageBucket": "st-arduino-proj.appspot.com"
 
     })
-'''
-db=firestore.client()
-
-exit = 0
-
-while exit == 0:
-    value = int(input("Temperature: ?"))
-
-    doc_ref = db.collection('Sensor 1').document('Temperature')
-    doc_ref.set({
-        'temperature': value
-    })
-
-    exit = int(input("1 to exit; other key to continue")) '''
-

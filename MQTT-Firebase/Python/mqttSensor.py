@@ -30,12 +30,13 @@ def on_connect(client,userdata,flags,rc):
     else:
         print ("Status: Sensor 1 - Bad Conncetion With Error Code: ",rc)
 
+if __name__ == "__main__":
 
-client = mqtt.Client()
+    client = mqtt.Client()
 
-client.on_connect = on_connect
+    client.on_connect = on_connect
 
-client.on_message = on_message
-client.connect("mqtt.eclipse.org",1883, 60)
+    client.on_message = on_message
+    client.connect("mqtt.eclipse.org",1883, 60) #connect to server,port, timeout
 
-client.loop_forever()
+    client.loop_forever()
