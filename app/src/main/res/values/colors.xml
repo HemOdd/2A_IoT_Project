@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="Black">#000000</color>
+    <color name="Transparent">#00FFFFFF</color>
+    <color name="White">#FFFFFF</color>
+    <color name="LoginCard">#E23E3E</color>
+    <color name="message_background">#74C4FF</color>
+    <color name="sender_message_bubble">#66B968</color>
+    <color name="fragment_background">#C4DEFF</color>
+    <color name="User_active">#00FF0E</color>
+    <color name="User_inactive">#FF0000</color>
+</resources>
