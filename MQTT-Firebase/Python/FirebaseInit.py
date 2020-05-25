@@ -9,9 +9,7 @@ def initialize():
     """
     cred = credentials.Certificate('./ServiceAccountKey.json')
     firebase_admin.initialize_app(cred,{
-        "apiKey": "AIzaSyCzfAt1eLmwZw3-DFP-i78g2AO-HwDyNug",
-        "authDomain": "st-arduino-proj.firebaseapp.com",
-        "databaseURL": "https://st-arduino-proj.firebaseio.com",
-        "storageBucket": "st-arduino-proj.appspot.com"
+        "apiKey": "AIzaSyA0uv2MNoeoCwbBt4O350a8Dsm_9IwfVGE",
+        "databaseURL": "https://team-2a-security.firebaseio.com/",
 
     })

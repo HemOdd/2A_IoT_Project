@@ -1,5 +1,4 @@
 
-
 #include "dht.h";
 
 #include "NewPing.h";
@@ -50,9 +49,10 @@ void loop() {
 
   distance = (duration/2) * speedOfSoundConv;
 
-   Serial.print("Temperature = ");
-    Serial.println(DHT.temperature);
-    Serial.println("C");
+    Serial.print("Temperature = ");
+    Serial.print(DHT.temperature);
+    Serial.print("C\n");
+   
     Serial.print("Humidity = ");
     Serial.println(DHT.humidity);
   Serial.print("Distance = ");
@@ -65,7 +65,8 @@ void loop() {
   {
     
     Serial.print(distance);
-    Serial.println(" cm");  
+    Serial.println(" cm"); 
+    Serial.println(); 
     delay(500);
   }
   delay(500);
