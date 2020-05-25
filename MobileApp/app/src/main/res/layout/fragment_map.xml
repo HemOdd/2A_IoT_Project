@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    tools:context=".Map_Screen.Map">
+
+    <ImageView
+        android:id="@+id/iv_blueprint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/RightPadding"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/RightPadding"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/floor_plan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_sensor2"
+        android:layout_width="@dimen/map_next_prev_dimens"
+        android:layout_height="@dimen/map_next_prev_dimens"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/green_circle"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_blueprint"
+        app:layout_constraintEnd_toEndOf="@+id/iv_blueprint" />
+
+    <TextView
+        android:id="@+id/tv_delimiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DistanceBetweenViews"
+        android:text="@string/map_delimiter"
+        android:textColor="@color/Black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_blueprint"
+        app:layout_constraintStart_toStartOf="@+id/iv_blueprint"
+        app:layout_constraintTop_toBottomOf="@+id/iv_blueprint" />
+
+    <TextView
+        android:id="@+id/tv_blueprintNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/DistanceBetweenViews"
+        android:text="TextView"
+        android:textColor="@color/Black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_delimiter"
+        app:layout_constraintEnd_toStartOf="@+id/tv_delimiter"
+        app:layout_constraintTop_toTopOf="@+id/tv_delimiter" />
+
+    <TextView
+        android:id="@+id/tv_totalBlueprintNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/loading"
+        android:textColor="@color/Black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_delimiter"
+        app:layout_constraintStart_toEndOf="@+id/tv_delimiter"
+        app:layout_constraintTop_toTopOf="@+id/tv_delimiter"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/btn_sensor1"
+        android:layout_width="@dimen/map_next_prev_dimens"
+        android:layout_height="@dimen/map_next_prev_dimens"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/green_circle"
+        app:layout_constraintStart_toStartOf="@+id/iv_blueprint"
+        app:layout_constraintTop_toTopOf="@+id/iv_blueprint" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginBottom="11dp"
+        android:background="#C6C5C5"
+        android:text="Sensor 1"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sensor1"
+        app:layout_constraintStart_toStartOf="@+id/iv_blueprint" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="10dp"
+        android:background="#C6C5C5"
+        android:text="Sensor 2"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sensor2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_blueprint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

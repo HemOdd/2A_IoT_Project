@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">799084147176-6gka18q06n2ar81kginj3nunotevejo2.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://team-2a-security.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">799084147176</string>
+    <string name="google_api_key" translatable="false">AIzaSyAK_NyctZoBP2AypAMJe0fF4i_8_77wuSU</string>
+    <string name="google_app_id" translatable="false">1:799084147176:android:cbc87e3de161cf16bdb45d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAK_NyctZoBP2AypAMJe0fF4i_8_77wuSU</string>
+    <string name="google_storage_bucket" translatable="false">team-2a-security.appspot.com</string>
+    <string name="project_id" translatable="false">team-2a-security</string>
+</resources>

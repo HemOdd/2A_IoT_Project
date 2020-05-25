@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/login_background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/LoginCard_startPadding"
+        android:layout_marginTop="@dimen/LoginCard_topPadding"
+        android:layout_marginEnd="@dimen/LoginCard_startPadding"
+        android:layout_marginBottom="@dimen/LoginCard_topPadding"
+        android:background="@drawable/login_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_LoginScreenTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/RightPadding"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/RightPadding"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/Login_page_message"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_Username"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/RightPadding"
+            android:layout_marginTop="@dimen/DistanceBetweenSections"
+            android:layout_marginEnd="@dimen/RightPadding"
+            android:drawableStart="@drawable/ic_perm_identity_black_24dp"
+            android:ems="10"
+            android:hint="@string/Hint_username"
+            android:paddingStart="@dimen/textPadding_LOGIN"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textColorHighlight="@color/cardview_dark_background"
+            android:textColorLink="@color/White"
+            android:textCursorDrawable="@drawable/cursor_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_LoginScreenTitle"
+            android:inputType="textCapSentences"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/RightPadding"
+            android:layout_marginTop="@dimen/DistanceBetweenViews"
+            android:layout_marginEnd="@dimen/RightPadding"
+            android:drawableStart="@drawable/ic_enhanced_encryption_black_24dp"
+            android:ems="10"
+            android:hint="@string/Hint_password"
+            android:inputType="number|textCapSentences"
+            android:paddingStart="@dimen/textPadding_LOGIN"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textColorHighlight="@color/cardview_dark_background"
+            android:textColorLink="@color/White"
+            android:textCursorDrawable="@drawable/cursor_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_Username" />
+
+        <com.example.team_2a_security.Custom_Button.FancyButton
+            android:id="@+id/btn_login"
+            android:layout_width="@dimen/LogIn_Button_width"
+            android:layout_height="@dimen/LogIn_Button_height"
+            android:layout_marginTop="@dimen/DistanceBetweenSections"
+            android:layout_marginBottom="@dimen/TopPadding"
+            android:onClick="OnLoginClicked"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password"
+            fancy:fb_borderColor="@color/White"
+            fancy:fb_borderWidth="3dp"
+            fancy:fb_defaultColor="@color/Transparent"
+            fancy:fb_focusColor="#7C7C7C"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="@string/btn_login"
+            fancy:fb_textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_cannotLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/DistanceBetweenViews"
+            android:text="@string/CantLogIn"
+            android:textColor="#9C9C9C"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintStart_toStartOf="@+id/btn_login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

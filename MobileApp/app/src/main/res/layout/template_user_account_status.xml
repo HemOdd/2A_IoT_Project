@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_userTemplate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Transparent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/InnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_user_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_userStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/DistanceBetweenViews"
+            android:layout_marginEnd="@dimen/RightPadding"
+            android:text="@string/user_inactive"
+            android:textColor="@color/User_inactive"
+            android:textSize="@dimen/subtitle_font_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_usernameTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_userName"
+            app:layout_constraintTop_toTopOf="@+id/tv_usernameTitle" />
+
+        <TextView
+            android:id="@+id/tv_usernameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/RightPadding"
+            android:layout_marginTop="@dimen/TopPadding"
+            android:text="@string/UserAccount_username"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/title_font_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_logOutButton"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="@dimen/RightPadding"
+            android:layout_marginTop="@dimen/DistanceBetweenViews"
+            android:layout_marginEnd="@dimen/RightPadding"
+            android:layout_marginBottom="@dimen/TopPadding"
+            android:background="@drawable/individual_msg_layout_recv"
+            android:fontFamily="serif-monospace"
+            android:text="@string/logout"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_usernameTitle" />
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/DistanceBetweenViews"
+            android:text="TextView"
+            android:textColor="@color/Black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_usernameTitle"
+            app:layout_constraintStart_toEndOf="@+id/tv_usernameTitle"
+            app:layout_constraintTop_toTopOf="@+id/tv_usernameTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

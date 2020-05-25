@@ -1,0 +1,118 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.team_2a_security"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:5:5-66
+11-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:5:22-64
+12
+13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+14    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:25:5-79
+15-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:25:22-76
+16
+17    <application
+17-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:7:5-29:19
+18        android:allowBackup="true"
+18-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:9:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/331630a23dfa1f0594bcf54d5352aa36/core-1.1.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:10:9-43
+22        android:label="@string/app_name"
+22-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:11:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:12:9-54
+24        android:supportsRtl="true"
+24-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:13:9-35
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme"
+26-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:14:9-40
+27        android:usesCleartextTraffic="true" >
+27-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:8:9-44
+28        <activity
+28-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:15:9-16:61
+29            android:name="com.example.team_2a_security.Home_Screen"
+29-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:15:19-46
+30            android:screenOrientation="portrait" />
+30-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:16:13-49
+31        <activity
+31-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:17:9-24:20
+32            android:name="com.example.team_2a_security.MainActivity"
+32-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:17:19-47
+33            android:screenOrientation="portrait" >
+33-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:18:13-49
+34            <intent-filter>
+34-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:19:13-23:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:20:17-69
+35-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:20:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:22:17-77
+37-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:22:27-74
+38            </intent-filter>
+39        </activity>
+40
+41        <meta-data
+41-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:26:9-28:57
+42            android:name="preloaded_fonts"
+42-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:27:13-43
+43            android:resource="@array/preloaded_fonts" />
+43-->/Users/hemodd/Downloads/team2a_project-master/app/src/main/AndroidManifest.xml:28:13-54
+44
+45        <service
+45-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:29:9-35:19
+46            android:name="com.google.firebase.components.ComponentDiscoveryService"
+46-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:30:13-84
+47            android:directBootAware="true"
+47-->[com.google.firebase:firebase-common:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/3280fafdfb2d308e411aff0ec617f560/firebase-common-19.2.0/AndroidManifest.xml:15:13-43
+48            android:exported="false" >
+48-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:31:13-37
+49            <meta-data
+49-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:32:13-34:85
+50                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+50-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:33:17-109
+51                android:value="com.google.firebase.components.ComponentRegistrar" />
+51-->[com.google.firebase:firebase-database:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/1b13ddd0979a31d5382231a327fe44a7/firebase-database-19.2.0/AndroidManifest.xml:34:17-82
+52        </service>
+53
+54        <activity
+54-->[com.google.android.gms:play-services-base:17.0.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/b989d78505a527364775fcd163b70614/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+55            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+55-->[com.google.android.gms:play-services-base:17.0.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/b989d78505a527364775fcd163b70614/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+56            android:exported="false"
+56-->[com.google.android.gms:play-services-base:17.0.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/b989d78505a527364775fcd163b70614/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+57            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+57-->[com.google.android.gms:play-services-base:17.0.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/b989d78505a527364775fcd163b70614/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+58
+59        <provider
+59-->[com.google.firebase:firebase-common:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/3280fafdfb2d308e411aff0ec617f560/firebase-common-19.2.0/AndroidManifest.xml:19:9-23:39
+60            android:name="com.google.firebase.provider.FirebaseInitProvider"
+60-->[com.google.firebase:firebase-common:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/3280fafdfb2d308e411aff0ec617f560/firebase-common-19.2.0/AndroidManifest.xml:20:13-77
+61            android:authorities="com.example.team_2a_security.firebaseinitprovider"
+61-->[com.google.firebase:firebase-common:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/3280fafdfb2d308e411aff0ec617f560/firebase-common-19.2.0/AndroidManifest.xml:21:13-72
+62            android:exported="false"
+62-->[com.google.firebase:firebase-common:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/3280fafdfb2d308e411aff0ec617f560/firebase-common-19.2.0/AndroidManifest.xml:22:13-37
+63            android:initOrder="100" />
+63-->[com.google.firebase:firebase-common:19.2.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/3280fafdfb2d308e411aff0ec617f560/firebase-common-19.2.0/AndroidManifest.xml:23:13-36
+64
+65        <meta-data
+65-->[com.google.android.gms:play-services-basement:17.0.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/62d5d57ac30226700a46000ea93e723b/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+66            android:name="com.google.android.gms.version"
+66-->[com.google.android.gms:play-services-basement:17.0.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/62d5d57ac30226700a46000ea93e723b/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+67            android:value="@integer/google_play_services_version" />
+67-->[com.google.android.gms:play-services-basement:17.0.0] /Users/hemodd/.gradle/caches/transforms-2/files-2.1/62d5d57ac30226700a46000ea93e723b/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+68    </application>
+69
+70</manifest>

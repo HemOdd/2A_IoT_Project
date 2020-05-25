@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "799084147176",
+    "firebase_url": "https://team-2a-security.firebaseio.com",
+    "project_id": "team-2a-security",
+    "storage_bucket": "team-2a-security.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799084147176:android:cbc87e3de161cf16bdb45d",
+        "android_client_info": {
+          "package_name": "com.example.team_2a_security"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799084147176-0qs2v1la7lthnuls07ne326e58j70jsu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.team_2a_security",
+            "certificate_hash": "6f0e0dc51060dbb7d268d8cb7b048c5e3c447c8b"
+          }
+        },
+        {
+          "client_id": "799084147176-079p1g50sqpmn361s6kea4aj79chn3aa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.team_2a_security",
+            "certificate_hash": "551cf59fbfe21d8880d3fbc0e957ea2b0745afc6"
+          }
+        },
+        {
+          "client_id": "799084147176-6gka18q06n2ar81kginj3nunotevejo2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK_NyctZoBP2AypAMJe0fF4i_8_77wuSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799084147176-6gka18q06n2ar81kginj3nunotevejo2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

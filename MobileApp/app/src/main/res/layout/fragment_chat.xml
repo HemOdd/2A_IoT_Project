@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    tools:context=".Chat_Screen.Chat">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_message_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/DistanceBetweenViews"
+            android:background="@color/message_background"
+            app:layout_constraintBottom_toTopOf="@+id/et_enteredMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <EditText
+            android:id="@+id/et_enteredMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/RightPadding"
+            android:layout_marginEnd="@dimen/DistanceBetweenViews"
+            android:layout_marginBottom="@dimen/TopPadding"
+            android:background="@drawable/text_box_outline"
+            android:ems="10"
+            android:hint="@string/messageHint"
+            android:inputType="textPersonName|textCapSentences|textImeMultiLine"
+            android:paddingStart="10dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_sendMessage"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_sendMessage"
+            android:layout_width="35dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="@dimen/RightPadding"
+            android:background="@drawable/ic_send_black_24dp"
+            android:clickable="true"
+            android:ellipsize="none"
+            android:focusable="true"
+            android:hapticFeedbackEnabled="true"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_enteredMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_enteredMessage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

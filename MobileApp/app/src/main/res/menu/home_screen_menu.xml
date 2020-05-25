@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Map"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_map_black_24dp"
+        android:title="Map"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/Chat"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_forum_black_24dp"
+        android:title="Chat"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/History"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="History"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/Account_Settings"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_perm_identity_black_24dp"
+        android:title="Account"
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TopPadding">10dp</dimen>
+    <dimen name="LeftPadding">15dp</dimen>
+    <dimen name="RightPadding">15dp</dimen>
+    <dimen name="DistanceBetweenSections">60dp</dimen>
+    <dimen name="DistanceBetweenViews">18dp</dimen>
+    <dimen name="LogIn_Button_height">55dp</dimen>
+    <dimen name="LogIn_Button_width">200dp</dimen>
+    <dimen name="textPadding_LOGIN">8dp</dimen>
+    <dimen name="LoginCard_startPadding">30dp</dimen>
+    <dimen name="LoginCard_topPadding">80dp</dimen>
+    <dimen name="bottomNavigationView_height">60dp</dimen>
+    <dimen name="chat_bubble_padding">90dp</dimen>
+    <dimen name="title_font_size">21sp</dimen>
+    <dimen name="subtitle_font_size">19sp</dimen>
+    <dimen name="map_next_prev_dimens">40dp</dimen>
+</resources>

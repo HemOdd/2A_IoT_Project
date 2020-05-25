@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Team_2A_Security</string>
+    <string name="Login_page_message">Welcome to Team 2A Security</string>
+    <string name="Hint_username">username</string>
+    <string name="Hint_password">password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="CantLogIn"><u>Can\'t Log In?</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="messageHint">Enter your message here</string>
+    <string name="delimiter">~</string>
+    <string name="UserAccount_username">Username :</string>
+    <string name="logout">Log Out</string>
+    <string name="user_active"><b>ACTIVE</b></string>
+    <string name="user_inactive"><b>INACTIVE</b></string>
+    <string name="map_delimiter">/</string>
+    <string name="loading">Loading...</string>
+    <string name="alertMsg">Alert</string>
+
+
+</resources>
