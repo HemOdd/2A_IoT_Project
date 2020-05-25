@@ -118,7 +118,6 @@ public class Map extends Fragment {
                             String timeStamp = doc.getString("timeStamp");
                             String dateTime = dateStamp+"T"+timeStamp;
                             if(checkDateTime(dateTime) == true) {
-                                System.out.println("TRU IT IS");
                                 if (sensorName.equals("Sensor1")){
                                     showAlertOnButton(sensor1Button);
                                 } else if (sensorName.equals("Sensor2")){

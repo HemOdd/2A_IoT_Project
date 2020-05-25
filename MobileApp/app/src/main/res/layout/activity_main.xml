@@ -87,7 +87,7 @@
             android:id="@+id/btn_login"
             android:layout_width="@dimen/LogIn_Button_width"
             android:layout_height="@dimen/LogIn_Button_height"
-            android:layout_marginTop="@dimen/DistanceBetweenSections"
+            android:layout_marginTop="24dp"
             android:layout_marginBottom="@dimen/TopPadding"
             android:onClick="OnLoginClicked"
             android:textStyle="bold"
@@ -103,17 +103,6 @@
             fancy:fb_radius="30dp"
             fancy:fb_text="@string/btn_login"
             fancy:fb_textColor="#000000" />
-
-        <TextView
-            android:id="@+id/tv_cannotLogIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/DistanceBetweenViews"
-            android:text="@string/CantLogIn"
-            android:textColor="#9C9C9C"
-            app:layout_constraintEnd_toEndOf="@+id/btn_login"
-            app:layout_constraintStart_toStartOf="@+id/btn_login"
-            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

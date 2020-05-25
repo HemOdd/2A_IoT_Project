@@ -36,44 +36,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/iv_blueprint"
         app:layout_constraintEnd_toEndOf="@+id/iv_blueprint" />
 
-    <TextView
-        android:id="@+id/tv_delimiter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/DistanceBetweenViews"
-        android:text="@string/map_delimiter"
-        android:textColor="@color/Black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/iv_blueprint"
-        app:layout_constraintStart_toStartOf="@+id/iv_blueprint"
-        app:layout_constraintTop_toBottomOf="@+id/iv_blueprint" />
-
-    <TextView
-        android:id="@+id/tv_blueprintNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/DistanceBetweenViews"
-        android:text="TextView"
-        android:textColor="@color/Black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_delimiter"
-        app:layout_constraintEnd_toStartOf="@+id/tv_delimiter"
-        app:layout_constraintTop_toTopOf="@+id/tv_delimiter" />
-
-    <TextView
-        android:id="@+id/tv_totalBlueprintNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="@string/loading"
-        android:textColor="@color/Black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_delimiter"
-        app:layout_constraintStart_toEndOf="@+id/tv_delimiter"
-        app:layout_constraintTop_toTopOf="@+id/tv_delimiter"
-        app:layout_constraintVertical_bias="0.6" />
-
     <Button
         android:id="@+id/btn_sensor1"
         android:layout_width="@dimen/map_next_prev_dimens"
