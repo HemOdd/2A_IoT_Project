@@ -4,7 +4,7 @@ import FirebaseInit
 from asyncInputRecorder import *
 import datetime
 
-time = [None] * 2 # depends on the number of sensor
+time = [[None for x in range(3)] for y in range(2)] # depends on the number of sensor
 
 def my_callback(userInput):
     """
@@ -20,6 +20,7 @@ def my_callback(userInput):
     else:
         client.publish("User 1", userInput)
         #log_File(userInput)
+        return userInput
 
 
 def on_message(client,userdata,msg):
@@ -40,14 +41,14 @@ def on_message(client,userdata,msg):
 
     if value['sensorid'] == 0:
         if value['distance'] < 5.00:
-            type = "distance"
+            type = 0
             log_File(value,30,type)
 
         elif value['temperature'] > 36.00:
-            type = "temperature"
+            type = 1
             log_File(value,120,type)
         elif value['humidity'] < 50.00:
-            type = "humidity"
+            type = 2
             log_File(value,120,type)
 
 
@@ -91,7 +92,7 @@ def log_File(value,delay,type):
         # print('original time: ',time[sensorId])
         temp = time[sensorId] + datetime.timedelta(seconds=delay)
         if datetime.datetime.now() > temp:
-            time[sensorId] = sensorId
+            time[sensorId] = dTime
             log_File_Helper(value,type)
 
 
@@ -116,14 +117,23 @@ def log_File_Helper(value,type):
         'timeStamp': timeToStr,
         'sensorName': value['sensorid'],
         'location':value['location'],
-        'sensorType': type
+        'sensorType': typeConverter(type)
     })
 
+def typeConverter(type):
+    switcher={
+        0:'distance sensor',
+        1:'temperature sensor',
+        2:'humidity sensor'
+    }
+    return switcher.get(type, "invalid value")
 if __name__ == "__main__":
-    client = mqtt.Client("user1-8936")
-    client.connect("mqtt.eclipse.org",1883, 60)
-    client.on_connect = on_connect
+    # client = mqtt.Client()
+    # client.connect("mqtt.eclipse.org",1883, 60)
+    # client.on_connect = on_connect
+    #
+    # client.on_message = on_message
+    #
+    # client.loop_forever()
 
-    client.on_message = on_message
-
-    client.loop_forever()
+    print(typeConverter(0))
