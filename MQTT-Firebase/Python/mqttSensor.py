@@ -9,7 +9,8 @@ def my_callback(userInput):
         client.disconnect()
         return -1
     else:
-        client.publish("Sensor 1", userInput)
+
+        client.publish("eclipse.org/FIT3162/Team2A/sensor1", userInput)
 
 def on_message(client,userdata,msg):
     topic = msg.topic

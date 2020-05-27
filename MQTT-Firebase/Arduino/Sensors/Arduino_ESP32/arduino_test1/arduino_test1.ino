@@ -6,13 +6,14 @@ int datas = 1;
 void setup() {
  Serial.begin(9600);
  Serial.println("Interfacfing arduino with nodemcu");
- sw.begin(96000);
+ sw.begin(9600);
 }
 
 void loop() {
- Serial.println("Sending data to nodemcu");
- Serial.print(id);
  
  sw.print(id);
  delay(5000);
+ Serial.println("Sending data to nodemcu");
+ Serial.print("99");
+ 
 }

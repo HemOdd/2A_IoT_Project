@@ -2,6 +2,7 @@
 #include <PubSubClient.h>
 
 
+
 // Update these with values suitable for your network.
 const char* ssid = "SunwayNet WIFI";
 //const char* password = "password";
@@ -88,10 +89,12 @@ void publishSerialData(char *serialData){
 }
 void loop() {
    client.loop();
+   Serial.println(Serial.available());
    if (Serial.available() > 0) {
      char bfr[501];
      memset(bfr,0, 501);
      Serial.readBytesUntil( '\n',bfr,500);
      publishSerialData(bfr);
    }
+   delay(500);
  }
