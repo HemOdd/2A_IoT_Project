@@ -130,7 +130,7 @@ public class Map extends Fragment {
 
     }
 
-    private boolean checkDateTime(String inputDateTimeStr){
+    public boolean checkDateTime(String inputDateTimeStr){
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy'T'HH:mm:ss");
         try {
