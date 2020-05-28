@@ -1,13 +1,18 @@
 package com.example.team_2a_security.History_Screen;
 
 public class Sensor {
-    private String sensorName, dateTime, location;
+    private String sensorType, dateTime, location;
+    private int id ;
+    private  double value;
 
-    public Sensor(String name, String datetime, String location)
+
+    public Sensor(int id, String sensorType, String datetime, String location, Double value)
     {
-        this.sensorName = name;
+        this.id = id;
         this.dateTime = datetime;
         this.location = location;
+        this.value = value;
+        this.sensorType = sensorType;
 
     }
 
@@ -19,19 +24,17 @@ public class Sensor {
         return location;
     }
 
-    public String getSensorName() {
-        return sensorName;
+    public String getSensorType() {
+        return sensorType;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public double getValue() {
+        return value;
     }
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
+    public int getId() {
+        return id;
     }
 
-    public void setSensorName(String sensorName) {
-        this.sensorName = sensorName;
-    }
+
 }

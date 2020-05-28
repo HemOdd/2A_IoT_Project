@@ -10,10 +10,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -91,6 +93,7 @@ public class Chat extends Fragment {
                     mCondition.push().setValue(currentMsg); //push msg object to firebase message section
 
                     et_message.getText().clear();
+                    et_message.onEditorAction(EditorInfo.IME_ACTION_DONE);
                 }
             }
         });

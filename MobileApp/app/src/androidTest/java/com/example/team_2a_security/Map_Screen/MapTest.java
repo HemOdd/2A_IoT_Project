@@ -71,14 +71,6 @@ public class MapTest {
         assertNotNull(lb2);
     }
 
-    @Test
-    public void checkDateTimeFunc(){
-
-        Date current = new Date();
-        String givenDate = "27/05/30T19:18:22";
-        boolean result = mappage.checkDateTime(givenDate);
-        assertEquals(result,true);
-    }
 
     @After
     public void tearDown() throws Exception {

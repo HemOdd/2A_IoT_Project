@@ -40,8 +40,8 @@
         android:id="@+id/btn_sensor1"
         android:layout_width="@dimen/map_next_prev_dimens"
         android:layout_height="@dimen/map_next_prev_dimens"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="240dp"
         android:background="@drawable/green_circle"
         app:layout_constraintStart_toStartOf="@+id/iv_blueprint"
         app:layout_constraintTop_toTopOf="@+id/iv_blueprint" />

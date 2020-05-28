@@ -37,9 +37,11 @@ public class RecyclerAdapterHistory extends RecyclerView.Adapter<RecyclerAdapter
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapterHistory.ViewHolder holder, int position) {
-        holder.alertMsg.setText("Alert from: " + payload.get(position).getSensorName());
+        String tempIdHolder = String.valueOf(payload.get(position).getId());
+        holder.alertMsg.setText("Alert from: " + payload.get(position).getSensorType() + "(" + tempIdHolder+ ")");
         holder.dateTime.setText(payload.get(position).getDateTime());
         holder.location.setText(payload.get(position).getLocation());
+        holder.valueMsg.setText(String.valueOf(payload.get(position).getValue()));
 
         final int fPosition = position;
         holder.itemView.setOnClickListener(new View.OnClickListener() { //set back to itemView for students
@@ -61,11 +63,13 @@ public class RecyclerAdapterHistory extends RecyclerView.Adapter<RecyclerAdapter
         public TextView alertMsg;
         public TextView dateTime;
         public TextView location;
+        public TextView valueMsg;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.itemView = itemView;
 //            itemImage = itemView.findViewById(R.id.item_image);
+            valueMsg = itemView.findViewById(R.id.value);
             alertMsg = itemView.findViewById(R.id.alert_msg);
             dateTime = itemView.findViewById(R.id.dateTime);
             location = itemView.findViewById(R.id.locationHistory);
