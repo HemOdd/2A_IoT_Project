@@ -112,14 +112,19 @@ def log_File_Helper(value,type):
     timeToStr = dTime.strftime("%H:%M:%S")
     print('here',value[typeConverter(type)])
 
-    doc_ref = db.collection("Alert").document()
+    doc_ref = db.collection("Log").document()
     doc_ref.set({
         'payload': value[typeConverter(type)],
         'dateStamp': dateToStr,
         'timeStamp': timeToStr,
-        'sensorName': value['sensorid'],
+        'sensorId': value['sensorid'],
         'location':value['location'],
         'sensorType': typeConverter(type)
+    })
+
+    alert_ref = db.collection("Alert").document()
+    alert_ref.set({
+        'sensorName':typeConverter(type)
     })
 
 def typeConverter(type):
