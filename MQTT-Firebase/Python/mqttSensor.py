@@ -9,11 +9,8 @@ def my_callback(userInput):
         client.disconnect()
         return -1
     else:
-        client.publish("Sensor 1", userInput)
 
-
-#start the Keyboard thread
-kthread = KeyboardThread(my_callback)
+        client.publish("eclipse.org/FIT3162/Team2A/sensor1", userInput)
 
 def on_message(client,userdata,msg):
     topic = msg.topic
@@ -22,20 +19,25 @@ def on_message(client,userdata,msg):
     print("From: ", topic)
     print ("Message Received: ",m_decode)
     print()
+
 def on_connect(client,userdata,flags,rc):
+
     if rc == 0:
         print ("Status: Sensor 1 Connected")
+        # start the Keyboard thread
+        kthread = KeyboardThread(my_callback)
         client.subscribe("User 1",0)
        # client.subscribe("Sensor 2",0)
     else:
         print ("Status: Sensor 1 - Bad Conncetion With Error Code: ",rc)
 
+if __name__ == "__main__":
 
-client = mqtt.Client()
+    client = mqtt.Client()
 
-client.on_connect = on_connect
+    client.on_connect = on_connect
 
-client.on_message = on_message
-client.connect("mqtt.eclipse.org",1883, 60)
+    client.on_message = on_message
+    client.connect("mqtt.eclipse.org",1883, 60) #connect to server,port, timeout
 
-client.loop_forever()
+    client.loop_forever()
