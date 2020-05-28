@@ -59,9 +59,9 @@ def typeConverter(type):
     :return: String of the corresponding type
     """
     switcher={
-        0:'distance sensor',
-        1:'temperature sensor',
-        2:'humidity sensor'
+        0:'distance',
+        1:'temperature',
+        2:'humidity'
     }
     return switcher.get(type, "invalid value")
 

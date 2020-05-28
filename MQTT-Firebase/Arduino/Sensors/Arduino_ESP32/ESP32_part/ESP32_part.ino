@@ -46,7 +46,7 @@ void reconnect() {
     if (client.connect(clientId.c_str())) {
       Serial.println("connected");
       //Once connected, publish an announcement...
-      client.publish("/team2A/esp32/sensor1", "hello world");
+      //client.publish("/team2A/esp32/sensor1", "hello world");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());

@@ -8,7 +8,7 @@ time = [[None for x in range(3)] for y in range(2)] # depends on the number of s
 
 def my_callback(userInput):
     """
-    This function is to send message to a particular topic
+    This function is to seAnd message to a particular topic
     :param userInput: is the message to be send to broker
     :return: None
     """
@@ -39,6 +39,7 @@ def on_message(client,userdata,msg):
 
     value = json.loads(m_decode)
 
+    print(value)
     if value['sensorid'] == 0:
         if value['distance'] < 5.00:
             type = 0
@@ -85,14 +86,14 @@ def log_File(value,delay,type):
     sensorId = value['sensorid']
 
     dTime = datetime.datetime.now()
-    if time[sensorId] is None:
-        time[sensorId] = dTime
+    if time[sensorId][type] is None:
+        time[sensorId][type] = dTime
         log_File_Helper(value,type)
     else:
         # print('original time: ',time[sensorId])
-        temp = time[sensorId] + datetime.timedelta(seconds=delay)
+        temp = time[sensorId][type] + datetime.timedelta(seconds=delay)
         if datetime.datetime.now() > temp:
-            time[sensorId] = dTime
+            time[sensorId][type] = dTime
             log_File_Helper(value,type)
 
 
@@ -109,10 +110,11 @@ def log_File_Helper(value,type):
     dTime = datetime.datetime.now()
     dateToStr = dTime.strftime("%d/%m/%Y")
     timeToStr = dTime.strftime("%H:%M:%S")
+    print('here',value[typeConverter(type)])
 
     doc_ref = db.collection("Alert").document()
     doc_ref.set({
-        'payload': value[type],
+        'payload': value[typeConverter(type)],
         'dateStamp': dateToStr,
         'timeStamp': timeToStr,
         'sensorName': value['sensorid'],
@@ -122,18 +124,22 @@ def log_File_Helper(value,type):
 
 def typeConverter(type):
     switcher={
-        0:'distance sensor',
-        1:'temperature sensor',
-        2:'humidity sensor'
+        0:'distance',
+        1:'temperature',
+        2:'humidity'
     }
     return switcher.get(type, "invalid value")
-if __name__ == "__main__":
-    # client = mqtt.Client()
-    # client.connect("mqtt.eclipse.org",1883, 60)
-    # client.on_connect = on_connect
-    #
-    # client.on_message = on_message
-    #
-    # client.loop_forever()
 
-    print(typeConverter(0))
+
+if __name__ == "__main__":
+    client = mqtt.Client()
+    client.connect("mqtt.eclipse.org",1883, 60)
+    client.on_connect = on_connect
+
+    client.on_message = on_message
+
+    client.loop_forever()
+
+
+
+

@@ -83,10 +83,10 @@ void loop() {
  sw.print("\"distance\":");
  sw.print(distance);//offset
  sw.print(",");
-  sw.print("\"temperature\":");
+ sw.print("\"temperature\":");
  sw.print(temp);//offset
  sw.print(",");
-  sw.print("\"humidity\":");
+ sw.print("\"humidity\":");
  sw.print(humidity);//offset
  sw.print(",");
  sw.print("\"location\":");

@@ -92,14 +92,14 @@ class UnittestLogic(unittest.TestCase):
 
         #0 convert oke
         result = logicTest.typeConverter(0)
-        self.assertEqual(result,"distance sensor")
+        self.assertEqual(result,"distance")
 
         result = logicTest.typeConverter(1)
-        self.assertEqual(result, 'temperature sensor')
+        self.assertEqual(result, 'temperature')
 
 
         result = logicTest.typeConverter(2)
-        self.assertEqual(result, "humidity sensor")
+        self.assertEqual(result, "humidity")
 
         result = logicTest.typeConverter(3)
         self.assertEqual(result, "invalid value")
